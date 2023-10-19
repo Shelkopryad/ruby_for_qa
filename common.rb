@@ -1,62 +1,49 @@
-
 puts 'Hello world!'
 
-hello_world = false
-puts hello_world
+# variables
+string_variable = 'Hello world!'
+puts string_variable
 
+number_variable = 123123
+puts number_variable
+
+boolean_variable = false
+puts boolean_variable
+
+array_variable = ['qwe', 123, true]
+puts array_variable.inspect
+
+hash_variable = {
+  'qwe' => 123,
+  'asd' => 234
+}
+puts hash_variable.inspect
+
+CONSTANT_VARIABLE = 'constant'.freeze
+puts CONSTANT_VARIABLE
+
+# conditionals
 x = rand 5
-
-if x <= 3
+if x >= 3
   puts "GO home"
 else
   puts "Another bottle of beer"
 end
 
+puts x >= 3 ? "GO home" : "Another bottle of beer"
+
+# loops
 x = 1
 while x < 5
   puts 'Drink'
   x += 1
 end
+puts "x = #{x}, stop drinking"
 
-
-
-# vedro.each { |element| puts element }
-
-def sort_apples(vedro, vedro2)
-  vedro.each_with_index do |element, index|
-    puts "Aplle #{element} to another vedro"
-    if element == 'Apple'
-      vedro2 << element
-    end
-  end
-  vedro2
+array_variable.each do |var|
+  puts var
 end
 
-
-vedro = %w[Apple Grusha Arbuz Sliva Apple]
-vedro2 = ['Apple', 'Grusha', 'Arbuz', 'Sliva', 'Apple']
-vedro3 = ['Apple', 'Arbuz', 'Sliva', 'Apple']
-
-vedro4 = []
-
-vedro5 = sort_apples(vedro, vedro4)
-puts vedro5.inspect
-
-
-test_hash = { name: 'Qwe', as_version: 18 }
-puts test_hash
-puts test_hash[:as_version]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+hash_variable.each do |key, value|
+  puts "#{key}: #{value}"
+end
