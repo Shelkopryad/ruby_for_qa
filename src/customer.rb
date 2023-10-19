@@ -17,7 +17,7 @@ class Customer
     end
     result << "  Cloud: #{@cloud.volume}\n"
     @scanners.each do |scanner|
-      result << "  Scanner: #{scanner.to_s}\n"
+      result << "  #{scanner.to_s}\n"
     end
     result
   end
