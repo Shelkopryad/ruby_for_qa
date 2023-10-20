@@ -47,3 +47,17 @@ end
 hash_variable.each do |key, value|
   puts "#{key}: #{value}"
 end
+
+def my_method(value_1, value_2)
+  value_1 / value_2
+end
+
+begin
+  puts my_method 4, 0
+rescue => e
+  if e.instance_of? ZeroDivisionError
+    puts 'Infinity'
+  end
+ensure
+
+end
